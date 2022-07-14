@@ -99,6 +99,6 @@ int main(){
     while( (getchar()) != '\n');//Limpeza do buffer de memória e confirmação do enter para continuar.
     getchar();
 
-    
+   
     return 0;
 }
