@@ -8,12 +8,12 @@ umas das duas listas será seu vetor de entrada e a outra será seu vetor de for
 /*Inicialmente, o vetor será dividido em 2 partes, aproximadamente na metade, de forma consecutiva.
 Posteriormente, será realizada a comapração e a ordernação dos valores utilizando um vetor auxiliar.*/
 
-void merge(int *vetor, int tamanho)
-{
+void merge(int *vetor, int tamanho){
+
     int metade = tamanho / 2, i = 0, j = metade, k = 0, auxiliar[tamanho];
 
-    while(i < metade && j < tamanho)
-    {
+    while(i < metade && j < tamanho){
+        
         if(vetor[i] <= vetor[j])
             auxiliar[k] = vetor[i++];
         else
@@ -32,12 +32,12 @@ void merge(int *vetor, int tamanho)
 }
 
 
-void mergeSort(int *vetor, int tamanho)
-{
+void mergeSort(int *vetor, int tamanho){
+
     int metade = tamanho / 2;
 
-    if(tamanho > 1)
-    {
+    if(tamanho > 1){
+    
         mergeSort(vetor, metade);//Caso a variável do tamanho do vetor seja maior do que 1, será feita a chamada da função MergeSort com as variaveis vetor e metade.
         mergeSort(vetor + metade, tamanho - metade);//Será realizada a junção do vetor e da metade, e do tamanho menos a metade.
         merge(vetor, tamanho);//Será feita a chamada da função acima, junto com as variaveis vetor e tamanho.
@@ -47,8 +47,8 @@ void mergeSort(int *vetor, int tamanho)
 /*Faça a entrada dos valores do vetor, e escolha entre numeros aleatórios ou através da entrada de dados.
 Ao final da operação, você conseguirá ver o vetor desordenado e o vetor após a ordernação.*/
 
-int main()
-{
+int main(){
+
     system("cls||clear");
     printf("\nGrupo Nubank: Gabriel, Jeferson, Mariana e Victor Ruan\n");
     printf("\n\n========================================\n");
@@ -58,17 +58,17 @@ int main()
 
     int vetor[10],i=0, opcao;
 
-    printf("\n1 - Numeros aleatorios\n2 - Entrar com numeros de sua escolha\nsua escolha: ");//Escolha o tipo de entrada de dados que desejar.
+    printf("\n1 - Numeros aleatorios\n2 - Digite numeros inteiros da\nsua escolha: ");//Escolha o tipo de entrada de dados que desejar.
     scanf("%d", &opcao);
 
     system("cls||clear");
 
-    if(opcao == 2)
-    {
+    if(opcao == 2){
+    
         printf("\n\nDigite 10 numeros inteiros de forma desordenada\n\n");//Caso escolha a opção 2, você deve digitar 10 valores desordenados correspondentes ao tamanho do vetor.
 
-        for (int i = 0; i < 10; i++)
-        {
+        for (int i = 0; i < 10; i++){
+        
             printf("Valor referente a posicao %d: ", i+1);
             scanf("%d", &vetor[i]);//Será realizada a leitura dos valores.
         }
@@ -78,8 +78,8 @@ int main()
     printf("        Vetor antes da ordenacao         \n");
     printf("========================================\n");
 
-    for(int i = 0; i < 10; i++)//Será realizada a impressão dos valores desordenados.
-    {
+    for(int i = 0; i < 10; i++){//Será realizada a impressão dos valores desordenados.
+    
         if(opcao == 1)
             vetor[i] = rand()%100;//Caso escolha a opção 1, o vetor será preenchido com numeros aleatórios.
 
