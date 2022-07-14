@@ -1,6 +1,10 @@
 #include<stdio.h>
 #include <stdlib.h>
 
+/*Quando você iniciar o codigo, ele terá um menu com duas opções, entrar com numeros aleatórios e entrada de numero em um vetor de 10 posições
+após a sua esscolha, será impresso na sua tela, duas lista de numeros, a lista original, ou seja, o vetor que você entrou, (entrada de dados no vetor e numeros aleatórios)
+umas das duas listas será seu vetor de entrada e a outra será seu vetor de forma ordenada crescente */
+
 /*Inicialmente, o vetor será dividido em 2 partes, aproximadamente na metade, de forma consecutiva.
 Posteriormente, será realizada a comapração e a ordernação dos valores utilizando um vetor auxiliar.*/
 
